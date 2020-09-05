@@ -4,6 +4,7 @@ import { Route, Switch, useRouteMatch } from "react-router-dom"
 import SavedList from './Movies/SavedList';
 import Movie from './Movies/Movie'
 import MovieList from './Movies/MovieList'
+import styled from 'styled-components'
 
 const App = () => {
   const [saved, setSaved] = useState([]); // Stretch: the ids of "saved" movies
@@ -33,7 +34,7 @@ console.log('movieList:', movieList)
     <div>
       <SavedList list={[ /* This is stretch */]} />
       <Switch >
-        <Route path="/movies/:movieList.id">
+        <Route path="/movies/:id">
           <Movie movies={movieList} />
         </Route>
         <Route path="/">
@@ -45,3 +46,4 @@ console.log('movieList:', movieList)
 };
 
 export default App;
+

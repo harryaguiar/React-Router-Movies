@@ -70,3 +70,7 @@ body {
   padding: 5px 10px;
   background-color: lightskyblue;
 }
+
+.cardTest{
+  text-decoration-style: none;
+}

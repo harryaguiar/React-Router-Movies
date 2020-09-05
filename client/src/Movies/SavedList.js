@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link, Route } from 'react-router-dom'
+import styled from 'styled-components'
+
 const SavedList = props => (
   <div className="saved-list">
     <h3>Saved Movies:</h3>
@@ -7,9 +9,15 @@ const SavedList = props => (
       <span className="saved-movie">{movie.title}</span>
     ))}
     <div className="home-button">
-      <Link to="/">Home</Link>
+      <Link to="/" style={{textDecoration: 'none', color: 'black'}}>Home</Link>
       </div>
+      <Route path="/" />
   </div>
+  
 );
 
 export default SavedList;
+
+
+const StyledLink = styled(Link)`
+text-decoration: none;`
